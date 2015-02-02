@@ -12,7 +12,7 @@ class Parse
     @business_list = []
 
     CSV.foreach(@file) do |row|
-      @business_list << Business.create(business_list: row[0], name: row[1], postal_code: row[5], latitude: row[6])
+      @business_list << {business_list: row[0], name: row[1], postal_code: row[5], latitude: row[6]}
       @business_list
     end
     @business_list
